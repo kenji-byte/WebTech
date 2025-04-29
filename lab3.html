@@ -1,87 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AIUB</title>
 <style>
 
-        body {
+    body {
 
-            display: flex;
+      margin: 0;
 
-            flex-direction: column;
+      padding: 0;
 
-            align-items: center;
+      background-color: white;
 
-            justify-content: center;
+      display: flex;
 
-            height: 100vh;
+      flex-direction: column;
 
-            margin: 0;
+      align-items: center;
 
-            background-color: white; /* Page background white */
+    }
 
-        }
+    .header {
 
-        .Tahmid {
+      text-align: center;
 
-            display: flex;
+      margin-top: 20px;
 
-            align-items: center;
+    }
 
-            justify-content: center;
+    .logo {
 
-        }
+      width: 200px;
 
-        .column {
+      height: auto;
 
-            display: flex;
+    }
 
-            flex-direction: column;
+    .Tahmid {
 
-            align-items: center;
+      display: flex;
 
-        }
+      justify-content: center;
 
-        .Hasan {
+      align-items: stretch;
 
-            background-color: white; /* Form background white */
+      margin-top: 20px;
 
-            height: auto;
+    }
 
-            width: 500px;
+    .Hasan {
 
-            padding: 20px;
+      background-color: white;
 
-            box-sizing: border-box;
+      width: 500px;
 
-            border: 5px solid black; /* Black margin (border) */
+      padding: 20px;
 
-            border-radius: 10px; /* Optional: makes corners a little rounded */
+      box-sizing: border-box;
 
-        }
+      border: 5px solid black;
 
-        .side-box {
+      border-radius: 0;
 
-            background-color: white; /* Side boxes white */
+    }
 
-            height: 300px;
+    .column {
 
-            width: 400px;
+      display: flex;
 
-            margin: 10px 0;
+      flex-direction: column;
 
-            border: 5px solid black; /* Black border for side boxes too */
+    }
 
-            border-radius: 10px;
+    .side-box {
 
-        }
+      background-color: white;
+
+      height: 50%;
+
+      width: 400px;
+
+      border: 5px solid black;
+
+      border-radius: 0;
+
+      border-top: none;
+
+    }
+
+    .side-box:first-child {
+
+      border-top: 5px solid black;
+
+    }
+
+    input, select, textarea {
+
+      width: 100%;
+
+      margin-bottom: 10px;
+
+      padding: 5px;
+
+    }
+
+    input[type="radio"] {
+
+      width: auto;
+
+    }
 </style>
 </head>
 <body>
-<img src="" alt="logo" style="width: 300px; height: 400px; margin-right: 20px; margin-bottom: -900px;">
-<h1 style="margin: 20px;">REGISTRATION PROCESS</h1>
+<div class="header">
+<img class="logo" src="c:\Users\student\Downloads\Education,_Studying,_University,_Alumni_-_icon.png" alt="logo" />
+<h1>REGISTRATION PROCESS</h1>
+</div>
 <div class="Tahmid">
 <div class="Hasan">
 <h2 style="background-color: rgb(220, 228, 223); text-align: center;">Registration Form</h2>
@@ -95,31 +131,27 @@
 <label for="cpassword">Confirm Password:</label><br>
 <input type="password" id="cpassword" name="cpassword" placeholder="Confirm your password"><br>
 <label for="gender">Gender:</label><br>
-<input type="radio" id="male" name="gender" value="male">
-<label for="male">Male</label><br>
-<input type="radio" id="female" name="gender" value="female">
-<label for="female">Female</label><br>
-<input type="radio" id="other" name="gender" value="other">
-<label for="other">Other</label><br>
+<input type="radio" id="male" name="gender" value="male"><label for="male">Male</label><br>
+<input type="radio" id="female" name="gender" value="female"><label for="female">Female</label><br>
+<input type="radio" id="other" name="gender" value="other"><label for="other">Other</label><br>
 <label for="dob">Date Of Birth:</label><br>
 <input type="date" id="dob" name="dob"><br>
 <label for="Country">Country:</label><br>
 <select id="Country" name="Country">
 <option value="">--Select--</option>
+<option value="Bangladesh">Bangladesh</option>
 <option value="Pakistan">Pakistan</option>
-<option value="Sri Lanka">Sri Lanka</option>
+<option value="India">India</option>
 <option value="Malaysia">Malaysia</option>
 <option value="Singapore">Singapore</option>
 <option value="Indonesia">Indonesia</option>
-<option value="Thailand">Thailand</option>
-<option value="Mexico">Mexico</option>
 <option value="Argentina">Argentina</option>
-<option value="New Zealand">New Zealand</option>
+<option value="Germany">Germany</option>
 <option value="Saudi Arabia">Saudi Arabia</option>
-<option value="UAE">United Arab Emirates</option>
-<option value="Turkey">Turkey</option>
-<option value="Egypt">Egypt</option>
-<option value="Nigeria">Nigeria</option>
+<option value="France">France</option>
+<option value="South Africa">South Africa</option>
+<option value="Colombia">Colombia</option>
+<option value="Chille">Chille</option>
 </select><br>
 <input type="checkbox" id="terms" name="terms">
 <label for="terms">I agree to the terms and conditions</label><br>
@@ -129,175 +161,175 @@
 <input type="color" id="bgcolor" name="bgcolor" value="#ffffff"><br>
 <input type="submit" value="Submit">
 </form>
-<script>
-
-                document.addEventListener('DOMContentLoaded', () => {
-
-                    const form = document.getElementById('registrationForm');
-
-                    form.addEventListener('submit', (event) => {
-
-                        event.preventDefault();
-
-                        const fullName = document.getElementById('fname').value.trim();
-
-                        const email = document.getElementById('email').value.trim();
-
-                        const password = document.getElementById('password').value.trim();
-
-                        const confirmPassword = document.getElementById('cpassword').value.trim();
-
-                        const dob = document.getElementById('dob').value.trim();
-
-                        const gender = document.querySelector('input[name="gender"]:checked');
-
-                        const country = document.getElementById('Country').value;
-
-                        const terms = document.getElementById('terms').checked;
-
-                        const bgcolor = document.getElementById('bgcolor').value;
-
-                        let isValid = true;
-
-                        const nameRegex = /^[a-zA-Z.\-\s]+$/;
-
-                        if (!fullName) {
-
-                            alert('Please enter your full name.');
-
-                            isValid = false;
-
-                        } else if (!nameRegex.test(fullName)) {
-
-                            alert('Full name can only contain letters, dots, hyphens, and spaces.');
-
-                            isValid = false;
-
-                        }
-
-                        const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;
-
-                        if (!email) {
-
-                            alert('Please enter your email.');
-
-                            isValid = false;
-
-                        } else if (!emailRegex.test(email)) {
-
-                            alert('Email must be a valid Gmail, Yahoo, or Hotmail address.');
-
-                            isValid = false;
-
-                        }
-
-                        if (!password) {
-
-                            alert('Please enter a password.');
-
-                            isValid = false;
-
-                        } else if (password.length < 8) {
-
-                            alert('Password must be at least 8 characters long.');
-
-                            isValid = false;
-
-                        }
-
-                        if (!confirmPassword) {
-
-                            alert('Please confirm your password.');
-
-                            isValid = false;
-
-                        } else if (password !== confirmPassword) {
-
-                            alert('Passwords do not match.');
-
-                            isValid = false;
-
-                        }
-
-                        if (!dob) {
-
-                            alert('Please select your date of birth.');
-
-                            isValid = false;
-
-                        } else {
-
-                            const dobDate = new Date(dob);
-
-                            const today = new Date();
-
-                            let age = today.getFullYear() - dobDate.getFullYear();
-
-                            const m = today.getMonth() - dobDate.getMonth();
-
-                            if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
-
-                                age--;
-
-                            }
-
-                            if (age < 18) {
-
-                                alert('You must be at least 18 years old.');
-
-                                isValid = false;
-
-                            }
-
-                        }
-
-                        if (!gender) {
-
-                            alert('Please select your gender.');
-
-                            isValid = false;
-
-                        }
-
-                        if (!country) {
-
-                            alert('Please select your country.');
-
-                            isValid = false;
-
-                        }
-
-                        if (!terms) {
-
-                            alert('You must agree to the terms and conditions.');
-
-                            isValid = false;
-
-                        }
-
-                        if (bgcolor && isValid) {
-
-                            document.querySelector('.Hasan').style.backgroundColor = bgcolor;
-
-                        }
-
-                        if (isValid) {
-
-                            alert('Registration Successful!');
-
-                            form.reset();
-
-                        }
-
-                    });
-
-                });
-</script>
 </div>
 <div class="column">
 <div class="side-box"></div>
 <div class="side-box"></div>
 </div>
 </div>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const form = document.getElementById('registrationForm');
+
+      form.addEventListener('submit', (event) => {
+
+        event.preventDefault();
+
+        const fullName = document.getElementById('fname').value.trim();
+
+        const email = document.getElementById('email').value.trim();
+
+        const password = document.getElementById('password').value.trim();
+
+        const confirmPassword = document.getElementById('cpassword').value.trim();
+
+        const dob = document.getElementById('dob').value.trim();
+
+        const gender = document.querySelector('input[name="gender"]:checked');
+
+        const country = document.getElementById('Country').value;
+
+        const terms = document.getElementById('terms').checked;
+
+        const bgcolor = document.getElementById('bgcolor').value;
+
+        let isValid = true;
+
+        const nameRegex = /^[a-zA-Z.\-\s]+$/;
+
+        if (!fullName) {
+
+          alert('Please enter your full name.');
+
+          isValid = false;
+
+        } else if (!nameRegex.test(fullName)) {
+
+          alert('Full name can only contain letters, dots, hyphens, and spaces.');
+
+          isValid = false;
+
+        }
+
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com)$/;
+
+        if (!email) {
+
+          alert('Please enter your email.');
+
+          isValid = false;
+
+        } else if (!emailRegex.test(email)) {
+
+          alert('Email must be a valid Gmail, Yahoo, or Hotmail address.');
+
+          isValid = false;
+
+        }
+
+        if (!password) {
+
+          alert('Please enter a password.');
+
+          isValid = false;
+
+        } else if (password.length < 8) {
+
+          alert('Password must be at least 8 characters long.');
+
+          isValid = false;
+
+        }
+
+        if (!confirmPassword) {
+
+          alert('Please confirm your password.');
+
+          isValid = false;
+
+        } else if (password !== confirmPassword) {
+
+          alert('Passwords do not match.');
+
+          isValid = false;
+
+        }
+
+        if (!dob) {
+
+          alert('Please select your date of birth.');
+
+          isValid = false;
+
+        } else {
+
+          const dobDate = new Date(dob);
+
+          const today = new Date();
+
+          let age = today.getFullYear() - dobDate.getFullYear();
+
+          const m = today.getMonth() - dobDate.getMonth();
+
+          if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
+
+            age--;
+
+          }
+
+          if (age < 18) {
+
+            alert('You must be at least 18 years old.');
+
+            isValid = false;
+
+          }
+
+        }
+
+        if (!gender) {
+
+          alert('Please select your gender.');
+
+          isValid = false;
+
+        }
+
+        if (!country) {
+
+          alert('Please select your country.');
+
+          isValid = false;
+
+        }
+
+        if (!terms) {
+
+          alert('You must agree to the terms and conditions.');
+
+          isValid = false;
+
+        }
+
+        if (bgcolor && isValid) {
+
+          document.querySelector('.Hasan').style.backgroundColor = bgcolor;
+
+        }
+
+        if (isValid) {
+
+          alert('Registration Successful!');
+
+          form.reset();
+
+        }
+
+      });
+
+    });
+</script>
 </body>
 </html> 
