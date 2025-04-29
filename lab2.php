@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 20px;
+           padding: 20px;
+           background-color: #f4f4f4;
+       }
+       .container {
+           max-width: 400px;
+           background: white;
+           padding: 20px;
+           border-radius: 5px;
+           box-shadow: 0px 0px 10px 0px #aaa;
+       }
+       label {
+           font-weight: bold;
+       }
+       input, select, textarea {
+           width: 100%;
+           padding: 8px;
+           margin-top: 5px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+       }
+       .gender-group {
+           display: flex;
+           gap: 10px;
+       }
+       .checkbox-group {
+           display: flex;
+           align-items: center;
+       }
+       button {
+           background-color: #28a745;
+           color: white;
+           padding: 10px;
+           border: none;
+           border-radius: 4px;
+           cursor: pointer;
+       }
+       button:hover {
+           background-color: #218838;
+       }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Registration Form</h2>
+<form action="#" method="post">
+<label for="fullname">Full Name:</label>
+<input type="text" id="fullname" name="fullname" required>
+<label for="email">User Email:</label>
+<input type="email" id="email" name="email" required>
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+<label for="confirm-password">Confirm Password:</label>
+<input type="password" id="confirm-password" name="confirm-password" required>
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required>
+<label for="country">Country:</label>
+<select id="country" name="country" required>
+<option value="">Select Country</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Germany">Germany</option>
+<option value="USA">United States</option>
+<option value="UK">United Kingdom</option>
+<option value="Canada">Canada</option>
+<option value="India">India</option>
+<option value="Australia">Australia</option>
+</select>
+<label>Gender:</label>
+<div class="gender-group">
+<input type="radio" id="male" name="gender" value="male" required>
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label>
+</div>
+<label for="comments">Comments:</label>
+<textarea id="comments" name="comments" rows="10" cols="20"></textarea>
+<div class="checkbox-group">
+<input type="checkbox" id="terms" name="terms" required>
+<label for="terms">I agree to the Terms and Conditions</label>
+</div>
+<button type="submit">Register</button>
+</form>
+</div>
