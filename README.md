@@ -1,2 +1,2 @@
 # WebTech
-CSC3215 | WebTech | HTML, JS
+WebTech | HTML, JS
